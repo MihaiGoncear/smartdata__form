@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.full__form {
+
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+
+    .btn {
+        width: 10%;
+    }
+
+    .form__container{
+        
+        display: flex;
+        flex-flow: row wrap;
+
+        .column {
+            width: 25%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+
+            .form__title {
+                height: 2vw;
+                margin: 0.5vw 0;
+                background-color: white;
+                h3 {
+                    font-size: 1vw;
+                }
+                h6 {
+                    font-size: 0.7vw;
+                }
+            }
+
+            .form__title__middle{
+                display: flex;
+                align-items: center;
+            }
+        
+            h3, h6 {
+                margin: 1%;
+            }
+            
+            label {
+                font-size: 0.7vw;
+            }
+            
+            .container {
+                display: flex;
+                flex-flow: row nowrap;
+                background-color: rgb(219, 219, 219);
+                margin: 1%;
+                padding: 2%;
+        
+                i {
+                    margin: 3% 0 0 2%;
+                    font-size: 1.4vw;
+                }
+        
+                .form__info__container {
+                    width: 90%;
+                }
+                
+                .info {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    margin: 2% 5%;
+                    select, input {
+                        border-radius: 5px;
+                        height: 4vh;
+                        background-color: white;
+                        border: 1px solid black;
+                    }
+                }
+                .city__info{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    .info{
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}

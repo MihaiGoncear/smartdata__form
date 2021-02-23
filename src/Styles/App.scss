@@ -1,87 +1,106 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+@import "./reset.scss";
+@import "./navigation.scss";
+@import "./sliders.scss";
 
 .full__form {
-
     display: flex;
     flex-flow: column nowrap;
-    width: 80%;
+    width: 75%;
+    margin: 0 15%;
+    justify-content: center;
+    background-color: var(--background-color);
 
     .btn {
         width: 10%;
+        margin: 5% 45%;
+        font-size: 1.5vw;
     }
 
-    .form__container{
-        
+    .form__container {
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
 
         .column {
-            width: 25%;
+            width: 45%;
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-between;
+            margin: 2%;
 
             .form__title {
-                height: 2vw;
-                margin: 0.5vw 0;
-                background-color: white;
+                height: 3vw;
+                margin-bottom: 0.5vw;
+                background-color: var(--background-color);
+
+                h3,
+                h6 {
+                    margin: 1%;
+                }
+
                 h3 {
-                    font-size: 1vw;
+                    font-size: 1.2vw;
                 }
                 h6 {
-                    font-size: 0.7vw;
+                    font-size: 0.9vw;
                 }
             }
 
-            .form__title__middle{
+            .form__title__middle {
                 display: flex;
                 align-items: center;
             }
-        
-            h3, h6 {
-                margin: 1%;
-            }
-            
+
             label {
-                font-size: 0.6vw;
+                font-size: 1.1vw;
+                padding: 2% 0;
             }
-            
+
+            .postalcode__info {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+
+                .info {
+                    width: 40%;
+                }
+            }
+
             .container {
                 display: flex;
                 flex-flow: row nowrap;
-                background-color: rgb(219, 219, 219);
+                background-color: var(--form-container-info-background);
                 margin: 1%;
                 padding: 2%;
-        
+
                 i {
                     margin: 3% 0 0 2%;
                     font-size: 1.4vw;
                 }
-        
+
                 .form__info__container {
                     width: 90%;
                 }
-                
+
                 .info {
                     display: flex;
                     flex-flow: column nowrap;
                     margin: 2% 5%;
-                    select, input {
+
+                    select,
+                    input {
                         border-radius: 5px;
-                        height: 4vh;
-                        background-color: white;
-                        border: 1px solid black;
+                        height: 2.8vw;
+                        background-color: var(--background-color);
+                        font-size: 1.1vw;
+                        border: 0.5px solid black;
                     }
                 }
-                .city__info{
+                .city__info {
                     display: flex;
                     flex-flow: row nowrap;
                     justify-content: space-between;
-                    .info{
+                    .info {
                         width: 40%;
                     }
                 }

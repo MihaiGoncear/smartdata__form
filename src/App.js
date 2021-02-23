@@ -11,14 +11,10 @@ class App extends Component {
     }
   }
 
-  test = e => {
-    alert(e.target.value)
-  }
-  
   render() {
     return (
       <Router>
-        <Main Test={this.test}/>
+        <Main/>
       </Router>
     );
   }

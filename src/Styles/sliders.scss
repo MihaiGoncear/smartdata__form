@@ -1,0 +1,60 @@
+
+.full__sliders__container{
+    width: 70%;
+    margin: 0 15%;
+    
+    .slider{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 3%;
+        width: 100%;
+    
+        .green {
+            color: green;
+            text-decoration: underline dotted;
+        }
+    
+        span {
+            font-size: 1.2vw;
+        }
+    
+        .input__slider {
+            margin-right: 1vw;
+        }
+        
+        .toggle { 
+            position : relative ; 
+            display : inline-block; 
+            width : 3.8vw; 
+            height : 2.1vw; 
+            background-color: grey; 
+            border-radius: 30px; 
+            transition: all 0.7s; 
+        } 
+                
+        .toggle:after { 
+            content: ''; 
+            position: absolute; 
+            width: 1.4vw; 
+            height: 1.4vw; 
+            border-radius: 50%; 
+            background-color: var(--html-background); 
+            top: 0.32vw; 
+            left: 0.45vw; 
+            transition: all 0.7s; 
+        } 
+                
+        .checkbox:checked + .toggle::after { 
+            left : 1.9vw; 
+        } 
+                
+        .checkbox:checked + .toggle { 
+            background-color: var(--border-and-submit-color); 
+        } 
+                
+        .checkbox { 
+            display : none; 
+        } 
+    }
+}

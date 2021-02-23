@@ -1,0 +1,33 @@
+nav {
+    display: flex;
+    width: 75%;
+    margin: 0 15%;
+    a{
+        width: 100%;
+        text-align: center;
+        padding: 2%;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.7vw;
+
+        &:hover{
+            color: rgb(144, 170, 255);
+            background-color: rgb(16, 21, 39);
+            border-bottom: 2px var(--border-and-submit-color) solid;
+        }
+    } 
+}
+
+.inactive{
+    border-bottom: solid 2px rgb(66, 66, 66);
+    color: rgb(152, 152, 152);
+    background-color: rgb(66, 66, 66);
+
+}
+
+.active {
+    border-bottom: 2px var(--border-and-submit-color) solid;
+    color: var(--background-color);
+    background-color: rgb(40, 40, 40);
+}

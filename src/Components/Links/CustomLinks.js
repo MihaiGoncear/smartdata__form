@@ -9,8 +9,6 @@ export function CustomLink({ label, to }) {
     });
   
     return (
-      <p className={match ? "active" : "inactive"}>
-        <Link to={to}>{label}</Link>
-      </p>
+        <Link className={match ? "active" : "inactive"} to={to}>{label}</Link>
     );
   }

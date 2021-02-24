@@ -1,13 +1,15 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
+
 
 export function Select({arr}){
     
     return(
-        <div className="info">
+        <div className="form__component">
             <label htmlFor={arr.htmlFor}>{arr.label}</label>
             <select id={arr.htmlFor} name={arr.htmlFor}>
                 { arr.options.map(item => 
-                    <option value={item.value}>{item.label}</option>
+                    <option key={uuidv4()} value={item.value}>{item.label}</option>
                 )}
             </select>
         </div>

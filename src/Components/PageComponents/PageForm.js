@@ -1,4 +1,5 @@
 import React from 'react'
+import ReCAPTCHA from "react-google-recaptcha";
 
 import { Select } from './PageElements/Select'
 import { Slider } from './PageElements/Slider'
@@ -36,7 +37,7 @@ export function PageForm() {
                                 <Input type='text' htmlFor='sname' label="Nom d'usage" />
                                 <Input type='date' htmlFor='date' label="Date de naissance" />
 
-                                <div className="city__info">
+                                <div className="twoInRow__input__container">
 
                                     <Input type='text' htmlFor='city' label="Ville de naissance" />
                                     <Select arr={selectedCityinPersonalInfo} />
@@ -53,7 +54,7 @@ export function PageForm() {
                                 <Input type='text' htmlFor='faddress' label="Adresse" />
                                 <Input type='text' htmlFor='saddress' label="Adresse 2" />
 
-                                <div className="postalcode__info">
+                                <div className="twoInRow__input__container">
 
                                     <Input type='text' htmlFor='postalcode' label="Code postal" />
                                     <Input type='text' htmlFor='scity' label="Ville" />
@@ -182,7 +183,11 @@ export function PageForm() {
                 <Slider id='switch3' label={sliderLabel} />
             </div>
 
-            <input htmlFor="code" className='btn' type="submit" value="Submit" />
+            <div className="recaptcha">
+                <ReCAPTCHA sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" hl='fr'/>
+            </div>
+
+            <input htmlFor="code" className='btn' type="submit" value="Etape suivante" />
 
         </form>
     )

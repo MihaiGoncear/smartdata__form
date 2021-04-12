@@ -1,15 +1,20 @@
 let cityOptions = [
     {
-        value: 'france',
+        value: 'none',
+        label: 'Select...',
+    },
+
+    {
+        value: 'Frace',
         label: 'Frace'
     },
 
     {
-        value: 'moldova',
+        value: 'Moldova',
         label: 'Moldova'
     },
     {
-        value: 'nigeria',
+        value: 'Nigeria',
         label: 'Nigeria'
     }
 ]
@@ -20,14 +25,21 @@ export let selectCivility = {
     label: 'Civilite',
     htmlFor: 'civility',
     options: [
+        {
+            id: 1,
+            value: 'none',
+            label: 'Select...',
+        },
 
         {
-            value: 'mister',
+            id: 2,
+            value: 'Monsieur',
             label: 'Monsieur'
         },
 
         {
-            value: 'madam',
+            id: 3,
+            value: 'Madam',
             label: 'Madam'
         }
     ]
@@ -52,6 +64,10 @@ export let securityQuestion = {
     label: 'Question secrete',
     htmlFor: 'question',
     options: [
+        {
+            value: 'none',
+            label: 'Select...',
+        },
 
         {
             value: 'first',

@@ -7,11 +7,11 @@ import { Input } from './PageElements/Input';
 import { selectCivility, selectedCityinPersonalInfo, selectedCityinAdress, securityQuestion, sliderLabel } from './PageElements/Components/LableAndSelectArrays';
 
 
-export function PageForm() {
+export function PageForm(props) {
 
     return (
 
-        <form className='full__form' action="/">
+        <form onSubmit={props.HandleSubmit}  className='full__form' action="/">
 
             <div className="form__container">
 
@@ -30,17 +30,17 @@ export function PageForm() {
 
                             <div className="form__info__container">
 
-                                <Select arr={selectCivility} />
-                                <Input type='text' htmlFor='fname' label='Prenom' />
-                                <Input type='text' htmlFor='mname' label='Deuxieme Prenome' />
-                                <Input type='text' htmlFor='lname' label='Nom' />
-                                <Input type='text' htmlFor='sname' label="Nom d'usage" />
-                                <Input type='date' htmlFor='date' label="Date de naissance" />
+                                <Select HandleChangeInput={props.HandleChangeInput} arr={selectCivility} />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='fname' label='Prenom' />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='mname' label='Deuxieme Prenome' />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='lname' label='Nom' />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='sname' label="Nom d'usage" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='date' htmlFor='date' label="Date de naissance" />
 
                                 <div className="twoInRow__input__container">
 
-                                    <Input type='text' htmlFor='city' label="Ville de naissance" />
-                                    <Select arr={selectedCityinPersonalInfo} />
+                                    <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='city' label="Ville de naissance" />
+                                    <Select HandleChangeInput={props.HandleChangeInput} arr={selectedCityinPersonalInfo} />
 
                                 </div>
                             </div>
@@ -51,17 +51,17 @@ export function PageForm() {
 
                             <div className="form__info__container">
 
-                                <Input type='text' htmlFor='faddress' label="Adresse" />
-                                <Input type='text' htmlFor='saddress' label="Adresse 2" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='faddress' label="Adresse" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='saddress' label="Adresse 2" />
 
                                 <div className="twoInRow__input__container">
 
-                                    <Input type='text' htmlFor='postalcode' label="Code postal" />
-                                    <Input type='text' htmlFor='scity' label="Ville" />
+                                    <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='postalcode' label="Code postal" />
+                                    <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='scity' label="Ville" />
 
                                 </div>
 
-                                <Select arr={selectedCityinAdress} />
+                                <Select HandleChangeInput={props.HandleChangeInput} arr={selectedCityinAdress} />
 
                             </div>
                         </div>
@@ -72,7 +72,7 @@ export function PageForm() {
 
                             <div className="form__info__container">
 
-                                <Input type='tel' htmlFor='tel' label="Telephone" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='tel' htmlFor='tel' label="Telephone" />
 
                             </div>
 
@@ -96,7 +96,7 @@ export function PageForm() {
 
                             <div className="form__info__container">
 
-                                <Input type='text' htmlFor='pseudo' label="Pseudo" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='pseudo' label="Pseudo" />
 
                             </div>
                         </div>
@@ -107,8 +107,8 @@ export function PageForm() {
 
                             <div className="form__info__container">
 
-                                <Input type='email' htmlFor='email' label="Email" />
-                                <Input type='email' htmlFor='semail' label="Confirmation email" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='email' htmlFor='email' label="Email" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='email' htmlFor='semail' label="Confirmation email" />
 
                             </div>
 
@@ -120,8 +120,8 @@ export function PageForm() {
 
                             <div className="form__info__container">
 
-                                <Input type='password' htmlFor='password' label="Mot de passe" />
-                                <Input type='password' htmlFor='spassword' label="Confirmation mot de passe" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='password' htmlFor='password' label="Mot de passe" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='password' htmlFor='spassword' label="Confirmation mot de passe" />
 
 
                             </div>
@@ -133,8 +133,8 @@ export function PageForm() {
 
                             <div className="form__info__container">
 
-                                <Select arr={securityQuestion} />
-                                <Input type='text' htmlFor='answer' label="Response a la question secrete" />
+                                <Select HandleChangeInput={props.HandleChangeInput} arr={securityQuestion} />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='answer' label="Response a la question secrete" />
 
                             </div>
                         </div>
@@ -152,8 +152,8 @@ export function PageForm() {
 
                             <div className="form__info__container">
 
-                                <Input placeholder='XXXX XXXX XXXX XXXX' type='text' htmlFor='iban' label="IBAN - Indetifiant International de Compte" />
-                                <Input type='text' htmlFor='bic' label="BIC - Indetifiant International de l'etablissement" />
+                                <Input HandleChangeInput={props.HandleChangeInput} placeholder='XXXX XXXX XXXX XXXX' type='text' htmlFor='iban' label="IBAN - Indetifiant International de Compte" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='bic' label="BIC - Indetifiant International de l'etablissement" />
 
                             </div>
 
@@ -165,7 +165,7 @@ export function PageForm() {
 
                             <div className="form__info__container">
 
-                                <Input type='text' htmlFor='code' label="Code promotionnel" />
+                                <Input HandleChangeInput={props.HandleChangeInput} type='text' htmlFor='code' label="Code promotionnel" />
 
                             </div>
 

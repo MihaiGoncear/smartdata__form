@@ -4,7 +4,7 @@ import { PageForm } from "./PageForm"
 import { PageResult } from "./PageResult"
 
 
-export function PageRender() {
+export function PageRender(props) {
     return (
         <div className="full__info__container">
             <Switch>
@@ -12,7 +12,7 @@ export function PageRender() {
                     <PageResult />
                 </Route>
                 <Route path="/">
-                    <PageForm/>
+                    <PageForm HandleSubmit={props.HandleSubmit} HandleChangeInput={props.HandleChangeInput} />
                 </Route>
             </Switch>
         </div>

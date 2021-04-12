@@ -166,7 +166,8 @@
                     align-items: center;
                 }
 
-                label {
+                label,
+                .label {
                     font-size: 1.1vw;
                     padding: 2% 0;
                 }
@@ -203,7 +204,11 @@
                         margin: 2% 5%;
 
                         select,
-                        input {
+                        input,
+                        .input_value {
+                            display: flex;
+                            align-items: center;
+                            padding-left: 2%;
                             border-radius: 5px;
                             height: 2.8vw;
                             background-color: var(--background-color);
